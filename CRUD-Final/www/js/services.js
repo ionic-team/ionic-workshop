@@ -1,7 +1,8 @@
 angular.module('crud.services', [])
+  .service('Todos', TodoService);
 
-.service('Todos', function() {
-  var todos = [{
+function TodoService() {
+  this.todos = [{
     name: 'Learn Ionic',
     completed: false
   }, {
@@ -11,9 +12,15 @@ angular.module('crud.services', [])
     name: 'Profit',
     completed: false
   }];
-  return {
-    all: function() {
-      return todos;
-    }
-  };
-});
+}
+
+
+TodoService.prototype.all = function() {
+  return this.todos
+};
+
+TodoService.prototype.add = function(newItem) {
+  this.todos.push(newItem);
+  // todos.unshift(newItem);
+};
+
