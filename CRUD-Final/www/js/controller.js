@@ -3,27 +3,14 @@ var crudControllers = angular.module('crud.controllers', []);
 crudControllers.controller('MainCtrl', MainCtrl);
 crudControllers.controller('NewTodoCtrl', NewTodoCtrl);
 
-// function MainCtrl(Todos, $ionicListDelegate) {
-//   var main = this;
-//
-//   main.todos = Todos.all();
-//
-//   main.complete = function(todo) {
-//     todo.completed = !todo.completed;
-//     $ionicListDelegate.closeOptionButtons();
-//   };
-// }
-
-function MainCtrl(Todos, $ionicListDelegate) {
-  var main = this;
-  main.todos = Todos.all();
-  main.complete = function(todo) {
-    todo.completed = !todo.completed;
-    $ionicListDelegate.closeOptionButtons();
+function MainCtrl(TodoService, $ionicListDelegate) {
+  this.todos = TodoService.all();
+  this.complete = function(todo) {
+    TodoService.remove(todo);
   };
 }
 
-function NewTodoCtrl(Todos, $ionicHistory) {
+function NewTodoCtrl(TodoService, $ionicHistory) {
   this.createTask = function(todoTask) {
     var newTodo = {};
     if (todoTask) {
@@ -31,7 +18,7 @@ function NewTodoCtrl(Todos, $ionicHistory) {
         name: todoTask,
         completed: false
       };
-      Todos.add(newTodo);
+      TodoService.add(newTodo);
       $ionicHistory.goBack();
     }
   }

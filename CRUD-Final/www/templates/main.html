@@ -5,7 +5,7 @@
 
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="todo in main.todos" todo="todo" ng-class="{'completed': todo.completed , '':!todo.completed}">
+      <ion-item ng-repeat="todo in main.todos" todo="todo" class="item-remove-animate">
         {{todo.name}}
         <ion-option-button class="button-positive" ng-click="main.complete(todo)">
           Finish

@@ -1,5 +1,5 @@
 angular.module('crud.services', [])
-  .service('Todos', TodoService);
+  .service('TodoService', TodoService);
 
 function TodoService() {
   this.todos = [{
@@ -14,7 +14,6 @@ function TodoService() {
   }];
 }
 
-
 TodoService.prototype.all = function() {
   return this.todos
 };
@@ -24,3 +23,6 @@ TodoService.prototype.add = function(newItem) {
   // todos.unshift(newItem);
 };
 
+TodoService.prototype.remove = function(todo) {
+  this.todos.splice(this.todos.indexOf(todo), 1);
+};
