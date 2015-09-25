@@ -12,8 +12,8 @@
  - [iOS SDK](https://developer.apple.com/xcode/) (_for osx only_)
 
 To set android up on windows, check out this video
+[![](http://img.youtube.com/vi/RNrNIHQ9cWo/0.jpg)](http://www.youtube.com/watch?v=RNrNIHQ9cWo)
 
-![](https://www.youtube.com/watch?v=RNrNIHQ9cWo)
 
 For everything else, the cordova docs are the best source of infomation
 
