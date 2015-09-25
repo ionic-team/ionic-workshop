@@ -40,3 +40,5 @@ $ cd ionic-workshop
 
 From there, were can cd into the various directories, and run `ionic serve`
 
+
+[Ionic Presentation](http://mhartington.io/ionic-presents/#/)
