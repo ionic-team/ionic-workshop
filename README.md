@@ -11,7 +11,16 @@
  - [Android SDK](http://developer.android.com/sdk/index.html)
  - [iOS SDK](https://developer.apple.com/xcode/) (_for osx only_)
 
-You can start by installing ionic, cordova, gulp, and bower.
+To set android up on windows, check out this video
+
+![](https://www.youtube.com/watch?v=RNrNIHQ9cWo)
+
+For everything else, the cordova docs are the best source of infomation
+
+[Cordova setup guide](http://cordova.apache.org/docs/en/5.0.0/guide_platforms_index.md.html#Platform%20Guides)
+
+With all the SDKs setup, you need to install ionic, cordova, gulp, and bower.
+
 
 ```bash
 #windows
